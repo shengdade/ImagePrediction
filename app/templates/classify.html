@@ -11,6 +11,14 @@
 <body>
 
 <div class="container">
+    <div class="col-lg-6 col-sm-6 col-12">
+        <div class="jumbotron text-center">
+            <h1>Prediction</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
     <h2>Image Predicted:</h2>
     <img class="img-responsive" src="{{ url_for('static', filename=filename) }}" height="345">
 </div>
@@ -25,10 +33,10 @@
         </thead>
         <tbody>
         {% for p in prediction[0] %}
-        <tr>
-            <td>{{ p[1] }}</td>
-            <td>{{ p[2] * 100 }} %</td>
-        </tr>
+            <tr>
+                <td>{{ p[1] }}</td>
+                <td>{{ p[2] * 100 }} %</td>
+            </tr>
         {% endfor %}
         </tbody>
     </table>
