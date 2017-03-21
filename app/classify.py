@@ -15,3 +15,7 @@ def classify_image(img_path):
 
     preds = model.predict(x)
     return decode_predictions(preds)
+
+
+if __name__ == '__main__':
+    print classify_image('elephant.jpg')
